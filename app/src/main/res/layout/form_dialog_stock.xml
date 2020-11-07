@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+   >
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/ic_baseline_close_24" />
+
+    <LinearLayout
+        android:id="@+id/context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvNamaBarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Barang : "
+                android:layout_marginTop="13dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+            <EditText
+                android:id="@+id/etNamaBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvNamaBarang"
+                android:layout_marginEnd="30dp"
+                android:textColor="@android:color/black"
+                android:inputType="text"
+                android:textSize="12sp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvJumlahStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Stock : "
+                android:layout_marginTop="13dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+            <EditText
+                android:id="@+id/etJumlahStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvJumlahStock"
+                android:layout_marginEnd="30dp"
+                android:textColor="@android:color/black"
+                android:inputType="text"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvKeterangan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keterangan     :"
+                android:layout_marginTop="13dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+            <EditText
+                android:id="@+id/etKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvKeterangan"
+                android:layout_marginEnd="30dp"
+                android:textColor="@android:color/black"
+                android:inputType="text"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@id/context"
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/back_button_register"
+        android:text="Save"
+        android:textColor="@android:color/white"
+      />
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.inventoryapp.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_register1Fragment2"
+            app:destination="@id/register1Fragment2"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+        <action
+            android:id="@+id/action_mainFragment_to_homeActivity"
+            app:destination="@id/homeActivity"
+            app:popEnterAnim="@anim/slide_in_bottom"
+            app:popExitAnim="@anim/slide_out_top"
+            app:enterAnim="@anim/slide_in_top"
+            app:exitAnim="@anim/slide_out_bottom"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/register1Fragment2"
+        android:name="com.example.inventoryapp.view.Register1Fragment"
+        android:label="fragment_register1"
+        tools:layout="@layout/fragment_register1" >
+        <action
+            android:id="@+id/action_register1Fragment2_to_register2Fragment2"
+            app:destination="@id/register2Fragment2"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/register2Fragment2"
+        android:name="com.example.inventoryapp.view.Register2Fragment"
+        android:label="fragment_register2"
+        tools:layout="@layout/fragment_register2" >
+        <action
+            android:id="@+id/action_register2Fragment2_to_resultFragment3"
+            app:destination="@id/resultFragment3"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment3"
+        android:name="com.example.inventoryapp.view.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment3_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.inventoryapp.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+</navigation>

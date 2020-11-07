@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ResultFragment">
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_back"
+        android:padding="30dp"
+        android:text="Result"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/formLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:text="Congratulations !!"
+            android:textColor="@color/colorDarkBlue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNameStore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_text"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_text"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnBackLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/back_button_register"
+            android:text="Back To Login"
+            android:textAllCaps="false"
+            android:textColor="#ffff"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</RelativeLayout>

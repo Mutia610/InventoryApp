@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:paddingEnd="10dp"
+        android:text="20-8-2020"
+        android:textSize="10sp"
+         />
+
+    <LinearLayout
+        android:id="@+id/context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDate"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tvNamaBarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="10dp"
+                android:text="Nama Barang : "
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/tvJumlahStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="10dp"
+                android:layout_below="@id/tvNamaBarang"
+                android:text="Jumlah Stock : "
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/tvKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="10dp"
+                android:layout_below="@id/tvJumlahStock"
+                android:text="Keterangan     :"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvIsiNamaBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="__________________________________"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+t
+            <TextView
+                android:id="@+id/tvIsiJmlStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="__________________________________"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/tvIsiKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="__________________________________"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorGreen"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/btnUpdate"
+                android:backgroundTint="@color/colorRed"
+                app:srcCompat="@drawable/ic_delete" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/context"
+        android:background="@color/colorBlue1"
+         />
+</RelativeLayout>
