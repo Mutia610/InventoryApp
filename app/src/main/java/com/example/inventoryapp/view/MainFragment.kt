@@ -64,19 +64,6 @@ class MainFragment : Fragment(),View.OnClickListener {
 
     }
 
-    private fun emptyEmail() {
-        textLEmail.error="Email harus diisi"
-    }
-
-    private fun emptyPassword() {
-        textPassword.error="Password harus diisi"
-    }
-
-    private fun errorLogin(it:Throwable) {
-        Toast.makeText(context,"Login Failed, Email Belum Terdaftar atau Password Salah", Toast.LENGTH_SHORT).show()
-        Log.d("TAG", "errorLogin: ${it.message}")
-    }
-
     private fun loginSuccess(it:User) {
         Log.d("TAG", "loginSuccess: OK")
         val bundle= bundleOf(
@@ -85,6 +72,19 @@ class MainFragment : Fragment(),View.OnClickListener {
         )
         navController.navigate(R.id.action_mainFragment_to_homeActivity,bundle)
         activity?.finish()
+    }
+
+    private fun errorLogin(it:Throwable) {
+        Toast.makeText(context,"Login Failed, Email Belum Terdaftar atau Password Salah", Toast.LENGTH_SHORT).show()
+        Log.d("TAG", "errorLogin: ${it.message}")
+    }
+
+    private fun emptyEmail() {
+        textLEmail.error="Email harus diisi"
+    }
+
+    private fun emptyPassword() {
+        textPassword.error="Password harus diisi"
     }
 
     override fun onClick(v: View?) {

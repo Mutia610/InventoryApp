@@ -74,7 +74,7 @@
                 android:layout_toRightOf="@id/tvJumlahStock"
                 android:layout_marginEnd="30dp"
                 android:textColor="@android:color/black"
-                android:inputType="text"
+                android:inputType="number"
                 android:textSize="12sp"
                 />
 

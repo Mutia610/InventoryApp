@@ -57,7 +57,7 @@ class ViewModelStock(application: Application) : AndroidViewModel(application) {
     fun updateStock(id:Int?, date:String?, nama_barang:String?, jumlah_stock:String?, keterangan:String?){
         repository.update(id, date, nama_barang, jumlah_stock, keterangan, {
             responseAksi.value = it
-            Toast.makeText(context, "Update Data Berhasil", Toast.LENGTH_LONG).show()
+     //       Toast.makeText(context, "Update Data Berhasil", Toast.LENGTH_LONG).show()
         },{
             isError.value = it
         })
@@ -66,7 +66,7 @@ class ViewModelStock(application: Application) : AndroidViewModel(application) {
     fun deleteStock(item: Stocks){
         repository.delete(item,{
             responseAksi.value = it
-            Toast.makeText(context, "Data berhasil dihapus", Toast.LENGTH_SHORT).show()
+     //       Toast.makeText(context, "Data berhasil dihapus", Toast.LENGTH_SHORT).show()
         },{
             isError.value = it
         })

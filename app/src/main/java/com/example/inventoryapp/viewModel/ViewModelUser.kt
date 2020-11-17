@@ -68,7 +68,6 @@ class ViewModelUser(application: Application):AndroidViewModel(application) {
             }, {
                 isErrorUser.value = it
 
-
             })
         }
     }

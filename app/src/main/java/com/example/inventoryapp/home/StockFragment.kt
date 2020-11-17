@@ -106,6 +106,7 @@ class StockFragment : Fragment() {
                     setPositiveButton("Yakin") { dialogInterface, i ->
                         if (item != null){
                             viewModelStock.deleteStock(item)
+                            Toast.makeText(context, "Data berhasil dihapus", Toast.LENGTH_LONG).show()
                         }
                     }
                     setNegativeButton("Batal") { dialogInterface, i ->
@@ -167,15 +168,7 @@ class StockFragment : Fragment() {
                 viewModelStock.updateStock(item?.id, getDate(), view.etNamaBarang.text.toString(),
                     view.etJumlahStock.text.toString(),
                     view.etKeterangan.text.toString())
-               /* updateStock(
-                    Stocks(
-                        item?.id,
-                        view.etJumlahStock.text.toString(),
-                        view.etKeterangan.text.toString(),
-                        view.etNamaBarang.text.toString(),
-tDate()
-                    )
-                ) */
+                Toast.makeText(context, "Update Data Berhasil", Toast.LENGTH_LONG).show()
         }
 
         view.back.setOnClickListener {

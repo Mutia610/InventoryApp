@@ -47,7 +47,7 @@ class Register1Fragment : Fragment(), View.OnClickListener {
     }
 
     private fun attachObserve() {
-        userViewModel._responseActionUser.observe(viewLifecycleOwner, Observer { gotUser() })
+        userViewModel._responseActionUser.observe(viewLifecycleOwner, Observer { getUser() })
         userViewModel._isErrorUser.observe(viewLifecycleOwner, Observer { emptyUser(it) })
         userViewModel.wrong_email.observe(viewLifecycleOwner, Observer { wrongEmail() })
         userViewModel.empty_email.observe(viewLifecycleOwner, Observer { emptyEmail() })
@@ -81,12 +81,11 @@ class Register1Fragment : Fragment(), View.OnClickListener {
         clearFindViewByIdCache()
     }
 
-    private fun gotUser() {
+    private fun getUser() {
         Log.d("TAG", "email sudah terdaftar")
         Toast.makeText(context, "Email sudah terdaftar", Toast.LENGTH_SHORT).show()
 
     }
-
 
     override fun onClick(v: View?) {
         when (v?.id) {
